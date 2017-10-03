@@ -29,3 +29,5 @@ END_OF_GITLAB_PP
 
 puppet apply --verbose /root/gitlab.pp
 
+cd /usr/bin
+ln -s /opt/gitlab/embedded/bin/git* .
