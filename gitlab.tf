@@ -2,7 +2,7 @@ data "template_file" "gitlab" {
   template = "${file("${path.module}/templates/gitlab-install.sh.tpl")}"
   vars {
     hostname      = "${var.host_prefix}-gitlab-01.${var.internal_domain_name}"
-    puppet_server = "${var.host_prefix}-gitlab-01.${var.internal_domain_name}"
+    puppet_server = "${var.host_prefix}-foreman-01.${var.internal_domain_name}"
     puppet_env    = "production"
     role          = "gitlab"
   }
