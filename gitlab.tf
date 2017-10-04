@@ -5,7 +5,7 @@ data "template_file" "gitlab-bootstrap" {
     puppet_server = "${var.host_prefix}-foreman-01.${var.internal_domain_name}"
     gitlab_server = "${var.host_prefix}-gitlab-01.${var.internal_domain_name}"
     puppet_env    = "production"
-    role          = "base"
+    role          = "gitlab"
   }
 }
 
