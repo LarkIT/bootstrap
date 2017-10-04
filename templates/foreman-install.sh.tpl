@@ -126,7 +126,7 @@ echo "role=foreman" > /etc/puppetlabs/facter/facts.d/role.txt
 
 # Puppet Cert
 hostcert=$$($$PUPPET config print hostcert)
-[ -f "$$hostcert" ] || $$PUPPET cert generate $${HOSTNAME} --allow-dns-alt-names $${DNS_ALT_NAMES}
+[ -f "$$hostcert" ] || $$PUPPET cert generate $${HOSTNAME} --allow-dns-alt-names "$${DNS_ALT_NAMES}"
 
 # Seriously hacky business here
 # puppetserver.conf:    ruby-load-path: [/opt/puppetlabs/puppet/lib/ruby/vendor_ruby,/etc/puppetlabs/code/environments/production/modules/gms/lib]
