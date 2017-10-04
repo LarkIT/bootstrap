@@ -7,7 +7,7 @@ GIT_SERVER='git@${gitlab_server}'
 CONTROL_REPO="$${GIT_SERVER}:puppet/control-repo"
 HOSTNAME="$(hostname -f)"
 DOMAINNAME="$(hostname -d)"
-DNS_ALT_NAMES='puppet.$${DOMAINNAME},puppet,foreman.$${DOMAINNAME},foreman'
+DNS_ALT_NAMES="puppet.$${DOMAINNAME},puppet,foreman.$${DOMAINNAME},foreman"
 
 # -------------------------------------
 # You shouldn't need to edit these
