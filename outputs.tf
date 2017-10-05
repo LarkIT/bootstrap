@@ -9,3 +9,7 @@ output "gitlab_cloutinit" {
 output "base_cloutinit" {
   value = "${data.template_cloudinit_config.base.rendered}"
 }
+
+output "railsapp_cloutinit" {
+  value = "${data.template_cloudinit_config.railsapp.rendered}"
+}
