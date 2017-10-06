@@ -13,3 +13,7 @@ output "base_cloutinit" {
 output "railsapp_cloutinit" {
   value = "${data.template_cloudinit_config.railsapp.rendered}"
 }
+
+output "pulp_cloutinit" {
+  value = "${data.template_cloudinit_config.pulp.rendered}"
+}
