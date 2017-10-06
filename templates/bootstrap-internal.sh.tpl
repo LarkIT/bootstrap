@@ -50,6 +50,7 @@ cd /etc/pki/rpm-gpg && curl -O -k https://${pulp_server}/pulp/static/rpm-gpg/RPM
 yum -y install puppet-agent
 
 ## Role
+mkdir -p /etc/puppetlabs/puppet
 #mkdir -p /etc/puppetlabs/facter/facts.d
 #echo "role=$role" > /etc/puppetlabs/facter/facts.d/role.txt
 cat > /etc/puppetlabs/puppet/csr_attributes.yaml << YAML
