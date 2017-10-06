@@ -2,7 +2,7 @@ data "template_file" "railsapp-bootstrap" {
 #  template = "${file("${path.module}/templates/bootstrap-internal.sh.tpl")}"
   template = "${file("${path.module}/templates/bootstrap.sh.tpl")}"
   vars {
-    hostname      = "${var.host_prefix}-prodapp-01.${var.internal_domain_name}"
+    hostname      = "${var.host_prefix}-stageapp-01.${var.internal_domain_name}"
     puppet_server = "${var.host_prefix}-foreman-01.${var.internal_domain_name}"
     pulp_server   = "${var.host_prefix}-pulp-01.${var.internal_domain_name}"
     puppet_env    = "production"
