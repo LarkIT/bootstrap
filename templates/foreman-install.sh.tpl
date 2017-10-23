@@ -102,6 +102,10 @@ done
 #git clone https://github.com/puppetlabs/puppetlabs-stdlib.git /etc/puppetlabs/code/environments/production/modules/stdlib
 #git clone https://github.com/voxpupuli/puppet-r10k.git /etc/puppetlabs/code/environments/production/modules/r10k
 #git clone https://github.com/puppetlabs/puppetlabs-git.git /etc/puppetlabs/code/environments/production/modules/git
+iptables -F
+setenforce 0
+iptables -L
+getenforce
 $$PUPPET module list | grep -q r10k || $$PUPPET module install puppet-r10k
 #$$PUPPET module list | grep -q puppetserver || $$PUPPET module install puppet-puppetserver
 
