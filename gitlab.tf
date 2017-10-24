@@ -6,6 +6,8 @@ data "template_file" "gitlab-bootstrap" {
     gitlab_server = "${var.host_prefix}-gitlab-01.${var.internal_domain_name}"
     puppet_env    = "production"
     role          = "gitlab"
+    region        = "${var.region}"
+    host_prefix   = "${var.host_prefix}"
   }
 }
 

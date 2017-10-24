@@ -1,6 +1,6 @@
-#variable "hostname" {
-#  description = "The AWS hostname assigned to the server."
-#}
+variable "region" {
+  description = "The AWS region where virtual machines will be deployed."
+}
 
 variable "host_prefix" {
   description = "Hostname prefix (abc)"
@@ -20,6 +20,11 @@ variable "reboot_script" {
   default     = "reboot.sh"
 }
 
-#variable "role" {
-#  description = "Puppet classification role"
-#}
+variable "role" {
+  description = "Puppet classification role"
+  default     = "base"
+}
+
+variable "hostname" {
+  description = "Name of the host"
+}

@@ -22,6 +22,8 @@ cat > /etc/puppetlabs/puppet/csr_attributes.yaml << YAML
 #     1.2.840.113549.1.9.7: mySuperAwesomePassword
 extension_requests:
     pp_role: ${role}
+    pp_region: ${region}
+    pp_application: ${host_prefix}
 YAML
 
 # Configure Puppet Agent

@@ -7,6 +7,8 @@ data "template_file" "railsapp-bootstrap" {
     pulp_server   = "${var.host_prefix}-pulp-01.${var.internal_domain_name}"
     puppet_env    = "production"
     role          = "railsapp"
+    region        = "${var.region}"
+    host_prefix   = "${var.host_prefix}"
   }
 }
 
