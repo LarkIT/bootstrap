@@ -1,11 +1,13 @@
 data "template_file" "bootstrap" {
   template = "${file("${path.module}/templates/bootstrap.sh.tpl")}"
   vars {
-    hostname      = "${var.host_prefix}-foreman-01.${var.internal_domain_name}"
+    hostname      = "${var.host_prefix}-${var.hostname}.${var.internal_domain_name}"
     puppet_server = "${var.host_prefix}-foreman-01.${var.internal_domain_name}"
     gitlab_server = "${var.host_prefix}-gitlab-01.${var.internal_domain_name}"
     puppet_env    = "production"
-    role          = "base"
+    role          = "${var.role}" 
+    region        = "${var.region}"
+    host_prefix   = "${var.host_prefix}"
   }
 }
 
