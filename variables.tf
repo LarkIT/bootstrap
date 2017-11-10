@@ -28,3 +28,8 @@ variable "role" {
 variable "hostname" {
   description = "Name of the host"
 }
+
+variable "pp_env" {
+  description = "Trusted fact pp_env setting"
+  default     = "production" 
+}
