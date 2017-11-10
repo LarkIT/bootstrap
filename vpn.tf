@@ -12,16 +12,16 @@
 #  }
 #}
 
-data "template_cloudinit_config" "vpn" {
-  part {
-    filename     = "bootstrap.sh"
-    content_type = "text/x-shellscript"
+#data "template_cloudinit_config" "vpn" {
+#  part {
+#    filename     = "bootstrap.sh"
+#    content_type = "text/x-shellscript"
 #    content      = "${data.template_file.bootstrap-vpn.rendered}"
-    content      = "${data.template_file.bootstrap.rendered}"
-  }
-  part {
-    filename     = "reboot.sh"
-    content_type = "text/x-shellscript"
-    content      = "${file("${path.module}/templates/reboot.sh")}"
-  }
-}
+#    content      = "${data.template_file.bootstrap.rendered}"
+#  }
+#  part {
+#    filename     = "reboot.sh"
+#    content_type = "text/x-shellscript"
+#    content      = "${file("${path.module}/templates/reboot.sh")}"
+#  }
+#}

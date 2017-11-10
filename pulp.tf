@@ -5,6 +5,7 @@ data "template_file" "pulp-bootstrap" {
     puppet_server = "${var.host_prefix}-foreman-01.${var.internal_domain_name}"
     puppet_env    = "production"
     role          = "pulp"
+    pp_env        = "${var.pp_env}"
     region        = "${var.region}"
     host_prefix   = "${var.host_prefix}"
   }

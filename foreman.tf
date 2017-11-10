@@ -7,6 +7,7 @@ data "template_file" "foreman-bootstrap" {
     gitlab_server = "${var.host_prefix}-gitlab-01.${var.internal_domain_name}"
     puppet_env    = "production"
     role          = "foreman"
+    pp_env        = "${var.pp_env}"
     region        = "${var.region}"
     host_prefix   = "${var.host_prefix}"
   }
