@@ -10,14 +10,7 @@ output "base_cloutinit" {
   value = "${data.template_cloudinit_config.base.rendered}"
 }
 
-output "railsapp_cloutinit" {
-  value = "${data.template_cloudinit_config.railsapp.rendered}"
-}
-
 output "pulp_cloutinit" {
   value = "${data.template_cloudinit_config.pulp.rendered}"
 }
 
-output "vpn_cloutinit" {
-  value = "${data.template_cloudinit_config.vpn.rendered}"
-}
