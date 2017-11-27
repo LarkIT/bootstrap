@@ -20,6 +20,14 @@ data "template_cloudinit_config" "base" {
   }
 
   part {
+    count        = "${var.is_foreman}"
+    filename     = "foreman-install.sh"
+    content_type = "text/x-shellscript"
+    content      = "${data.template_file.foreman.rendered}"
+  }
+
+
+  part {
     filename     = "${var.reboot_script}"
     content_type = "text/x-shellscript"
     content      = "${file("${path.module}/templates/reboot.sh")}"

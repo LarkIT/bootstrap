@@ -33,3 +33,8 @@ variable "pp_env" {
   description = "Trusted fact pp_env setting"
   default     = "production" 
 }
+
+variable "is_foreman" {
+  description = "Trusted fact pp_env setting"
+  default     = 0
+}
