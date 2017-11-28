@@ -34,7 +34,7 @@ variable "pp_env" {
   default     = "production" 
 }
 
-variable "is_foreman" {
+variable "template_name" {
   description = "Trusted fact pp_env setting"
-  default     = false
+  default     = "blank"
 }
