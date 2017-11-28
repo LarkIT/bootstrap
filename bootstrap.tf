@@ -13,7 +13,7 @@ data "template_file" "bootstrap" {
 }
 
 data "template_file" "fragment" {
-  template = "${file("${path.module}/templates/${var.template_name}.sh.tpl")}"
+  template = "${file("${path.module}/templates/${var.bootstrap_template}.sh.tpl")}"
   vars {
     hostname      = "${var.host_prefix}-${var.hostname}.${var.internal_domain_name}"
     puppet_server = "${var.host_prefix}-foreman-01.${var.internal_domain_name}"
@@ -34,7 +34,7 @@ data "template_cloudinit_config" "base" {
   }
 
   part {
-    filename     = "${var.template_name}.sh"
+    filename     = "${var.bootstrap_template}.sh"
     content_type = "text/x-shellscript"
     content      = "${data.template_file.fragment.rendered}"
   }
