@@ -139,6 +139,7 @@ grep -q 'gms/lib' $$PUPPETSERVER_CONF || sed -i -r 's#(ruby-load-path:.*)]#\1, /
 
 systemctl enable puppetserver
 systemctl start puppetserver
+sudo -u puppet -s /bin/bash -c "ssh -o 'StrictHostKeyChecking no' github.com"
 $$PUPPET agent -t
 
 echo 'DONE!?'
