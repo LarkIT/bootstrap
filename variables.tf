@@ -38,3 +38,13 @@ variable "bootstrap_template" {
   description = "Custom bootstrap template"
   default     = "blank"
 }
+
+variable "puppet_server" {
+  description = "Default Puppet server name."
+  default     = "foreman-01"
+}
+
+variable "gitlab_server" {
+  description = "Default Gitlab server name."
+  default     = "gitlab-01"
+}
